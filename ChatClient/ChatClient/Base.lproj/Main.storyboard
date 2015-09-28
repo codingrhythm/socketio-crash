@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nR-01-nBL">
+                                <rect key="frame" x="255" y="285" width="91" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="97H-Zw-OVX"/>
+                                    <constraint firstAttribute="height" constant="30" id="WXd-Hy-GOs"/>
+                                </constraints>
+                                <state key="normal" title="Disconnect"/>
+                                <connections>
+                                    <action selector="handleDisconnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DXm-5g-2QT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oll-1W-x2D">
+                                <rect key="frame" x="255" y="247" width="91" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="handleConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6g-4s-Te1"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="W8c-4l-TGD">
+                                <rect key="frame" x="276" y="208" width="51" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="3h0-eB-rZ1"/>
+                                    <constraint firstAttribute="height" constant="31" id="Dwk-BY-6KB"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Delegate (will cause crash)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t7-aQ-1Q8">
+                                <rect key="frame" x="178" y="180" width="245" height="20"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6t7-aQ-1Q8" firstAttribute="centerX" secondItem="W8c-4l-TGD" secondAttribute="centerX" id="E94-Eu-oJg"/>
+                            <constraint firstItem="0nR-01-nBL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M5S-6N-spu"/>
+                            <constraint firstItem="Oll-1W-x2D" firstAttribute="leading" secondItem="0nR-01-nBL" secondAttribute="leading" id="O3H-CP-Uc6"/>
+                            <constraint firstItem="Oll-1W-x2D" firstAttribute="width" secondItem="0nR-01-nBL" secondAttribute="width" id="QWf-VP-xGu"/>
+                            <constraint firstItem="Oll-1W-x2D" firstAttribute="top" secondItem="W8c-4l-TGD" secondAttribute="bottom" constant="8" id="UwY-AD-Ts9"/>
+                            <constraint firstItem="W8c-4l-TGD" firstAttribute="top" secondItem="6t7-aQ-1Q8" secondAttribute="bottom" constant="8" id="VCY-kq-4Yf"/>
+                            <constraint firstItem="0nR-01-nBL" firstAttribute="top" secondItem="Oll-1W-x2D" secondAttribute="bottom" constant="8" id="Y8l-Ln-7nh"/>
+                            <constraint firstItem="0nR-01-nBL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZQf-H8-wq2"/>
+                            <constraint firstItem="W8c-4l-TGD" firstAttribute="centerX" secondItem="Oll-1W-x2D" secondAttribute="centerX" id="mGP-LH-3MS"/>
+                            <constraint firstItem="Oll-1W-x2D" firstAttribute="height" secondItem="0nR-01-nBL" secondAttribute="height" id="n9z-tY-lP0"/>
+                            <constraint firstItem="Oll-1W-x2D" firstAttribute="trailing" secondItem="0nR-01-nBL" secondAttribute="trailing" id="pww-Pm-sqY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switchButton" destination="W8c-4l-TGD" id="PJ2-fc-q24"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="655"/>
+        </scene>
+    </scenes>
+</document>
